@@ -11,4 +11,3 @@
   <span><%= @person.get('age') %></span>
 </div>
 
-<button id="back_person"> atras</button>

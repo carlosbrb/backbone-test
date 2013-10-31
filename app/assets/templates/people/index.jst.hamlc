@@ -1,0 +1,12 @@
+%h1 Hola
+
+.small-12.columns
+  .row.collapse
+    .small-10.columns
+      %input{ :type=>"text", :id=>"search" ,:placeholder=>"Search"}
+    .small-2.columns
+      %span.postfix.radius
+        %i.fi-magnifying-glass  
+%ul{ :id => "people"}
+%button{ :id=>"push_me"} PushMe
+%button{ :id => "new_btn"} Nuevo

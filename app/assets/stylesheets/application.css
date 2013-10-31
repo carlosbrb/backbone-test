@@ -17,9 +17,3 @@ ul, li
   list-style-type: none;
 }
 
-li 
-{
-  padding-left: 2em; 
-  text-indent: -2em;
-  border-bottom: 3px solid blue;
-}

@@ -13,7 +13,7 @@ class BackboneTest.Routers.People extends Backbone.Router
   index: ->
     @collection.fetch({reset: true})
     view = new BackboneTest.Views.PeopleIndex(collection: @collection)
-    $("#box").html(view.render().el)
+    $("#panel").html(view.render().el)
 
   new: ->
     view = new BackboneTest.Views.PeopleNew()

@@ -19,5 +19,6 @@ class BackboneTest.Views.PeopleNew extends Backbone.View
     @collection.create attributes,
       wait: true
       success: ->
+        $('#box').html('')
         Backbone.history.navigate('', true)
       error: @handleError

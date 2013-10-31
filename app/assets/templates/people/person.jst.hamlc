@@ -1,0 +1,3 @@
+= @person.get('name') 
+- if @person.get('age') == 0 
+  %span.person" Edad 0 

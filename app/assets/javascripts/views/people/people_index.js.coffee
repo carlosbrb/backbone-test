@@ -5,10 +5,11 @@ class BackboneTest.Views.PeopleIndex extends Backbone.View
   events:
     'click #push_me': 'selectPerson'
     "click #new_btn": "newPerson"
+    "keyup #search": "searchPeople"
 
   initialize: ->
     @collection.on('reset', @render, this)
-    @collection.on('add', @render, this)
+    @collection.on('add', @appendPerson, this)
 
   render: ->
     $(@el).html(@template())
@@ -32,3 +33,8 @@ class BackboneTest.Views.PeopleIndex extends Backbone.View
   selectPerson: (event) ->
     event.preventDefault()
     @collection.selectPerson()
+
+  searchPeople: (event) ->
+    $('#people').html('')
+    collection = new BackboneTest.Collections.People(@collection.search($("#search").val()))
+    collection.each(@appendPerson)

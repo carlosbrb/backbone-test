@@ -22,13 +22,7 @@
   </head>
 
   <body>
-  <div class="row">
-    <div class="large-8 columns">
-      <%= yield %>
-    </div>
-    <div class="details">
-    </div>
-  </div>
-  <%= javascript_include_tag "application" %>
-</body>
+    <%= yield %> 
+    <%= javascript_include_tag "application" %>
+  </body>
 </html>
