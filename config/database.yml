@@ -1,0 +1,31 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: backbone_dev
+  pool: 5
+  username: postgres
+  password: postgres
+  host: localhost
+  # host: 10.1.0.8
+  port: 5432
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: backbone_test
+  pool: 5
+  username: postgres
+  password: postgres
+  host: localhost
+  port: 5432
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: backbone_production
+  pool: 5
+  username: postgres
+  password: postgres
+  host: localhost
+  port: 5432
+
