@@ -1,0 +1,14 @@
+%h3 Person
+%div{:id => "person_#{@person.get('name')}"}
+  .name
+    %span Name:
+    %span= @person.get('name')
+  .address
+    %span Address:
+    %span= @person.get('address')
+  .age
+    %span Age:
+    %span= @person.get('age')
+
+%button#edit Editar
+  

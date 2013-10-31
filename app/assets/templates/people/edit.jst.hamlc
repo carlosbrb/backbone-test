@@ -1,0 +1,2 @@
+%h3 Edit Person
+!=JST["people/_form"](person: @person)

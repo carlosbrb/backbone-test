@@ -1,4 +1,0 @@
-<%= @person.get('name') %>
-<% if @person.get('age') == 0 :%>
-  <span class="person"> Edad 0 </span>
-<% end %>

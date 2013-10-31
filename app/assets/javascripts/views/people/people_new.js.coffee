@@ -7,7 +7,6 @@ class BackboneTest.Views.PeopleNew extends Backbone.View
 
   initialize: ->
     @collection = new BackboneTest.Collections.People()
-    # @collection.fetch({reset: true})
 
   render: ->
     $('#box').html($(@el).html(@template()))
@@ -21,4 +20,5 @@ class BackboneTest.Views.PeopleNew extends Backbone.View
       success: ->
         $('#box').html('')
         Backbone.history.navigate('', true)
-      error: @handleError
+      error: ->
+        alert "Faltan Datos"

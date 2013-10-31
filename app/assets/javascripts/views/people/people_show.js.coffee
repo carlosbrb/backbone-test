@@ -4,6 +4,7 @@ class BackboneTest.Views.PeopleShow extends Backbone.View
 
   events:
     'click #back_person': 'backPerson'
+    'click #edit': 'editPerson'
 
   render: ->
     $(@el).html(@template(person: @model))
@@ -12,3 +13,7 @@ class BackboneTest.Views.PeopleShow extends Backbone.View
   backPerson: (event) ->
     event.preventDefault()
     window.history.back();  
+
+  editPerson: (event) ->
+    event.preventDefault()
+    Backbone.history.navigate("people/#{@model.get('id')}/edit", true)

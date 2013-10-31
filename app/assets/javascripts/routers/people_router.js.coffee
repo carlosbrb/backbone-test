@@ -2,6 +2,7 @@ class BackboneTest.Routers.People extends Backbone.Router
   routes:
     '': 'index'
     'people/new': 'new'
+    'people/:id/edit': 'edit'
     'people/:id': 'show'
 
   initialize: ->
@@ -24,3 +25,7 @@ class BackboneTest.Routers.People extends Backbone.Router
     view = new BackboneTest.Views.PeopleShow(model: @model)
     $("#box").html(view.render().el)
 
+  edit: (id) ->
+    @model = @collection.get(id)
+    view = new BackboneTest.Views.PeopleEdit(model: @model)
+    $("#box").html(view.render().el)    

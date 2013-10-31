@@ -1,5 +1,3 @@
-%form{ :id => "new_person"}
-  %input{ :type => "text", :name=> "name", :id=> "new_person_name", :placeholder => "Name"}
-  %input{ :type => "text", :name=> "address", :id=> "new_person_address", :placeholder => "Address"}
-  %input{ :type => "text", :name=> "age", :id=> "new_person_age", :placeholder => "Age"}
-  %input{ :type => "submit", :value=> "Agregar" }
+%h3 New Person
+!=JST["people/_form"](person: null)
+

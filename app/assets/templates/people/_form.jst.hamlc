@@ -1,0 +1,13 @@
+%form{ :id => "person"}
+  .row
+    .large-6.columns
+      %input{ :type => "text", :name=> "name", :id=> "new_person_name", :placeholder => "Name", :class=>"medium", :value=> @person.get('name') if @person  }
+  .row
+    .large-6.columns
+      %input{ :type => "text", :name=> "address", :id=> "new_person_address", :placeholder => "Address", :class=>"medium", :value=> @person.get('address') if @person  }
+  .row
+    .large-6.columns
+      %input{ :type => "text", :name=> "age", :id=> "new_person_age", :placeholder => "Age", :class=>"medium", :value=> @person.get('age') if @person  }
+  .row
+    .large-6.columns
+      %input{ :type => "submit", :value=> "Agregar" }

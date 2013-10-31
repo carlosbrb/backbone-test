@@ -1,6 +1,0 @@
-<form id="new_person">
-  <input type="text" name="name" id="new_person_name">
-  <input type="text" name="address" id="new_person_address">
-  <input type="text" name="age" id="new_person_age">
-  <input type="submit" value="Agregar">
-</form>
