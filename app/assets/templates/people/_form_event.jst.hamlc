@@ -1,0 +1,11 @@
+%form{ :id => "person_event"}
+  .row
+    .large-6.columns
+      %input{ :type => "hidden", :name=> "event_person_id", :id=> "event_person_id", :value=> @person.get('id')  }
+      %input{ :type => "text", :name=> "event_title", :id=> "event_title", :placeholder => "Title", :class=>"medium"}
+  .row
+    .large-6.columns
+      %input{ :type => "text", :name=> "event_start", :id=> "event_start", :placeholder => "Start", :class=>"medium"}
+  .row
+    .large-6.columns
+      %input{ :type => "submit", :value=> "Crear" }

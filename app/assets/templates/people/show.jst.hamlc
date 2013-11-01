@@ -11,4 +11,16 @@
     %span= @person.get('age')
 
 %button#edit Editar
+<button href="#" data-reveal-id="myModal">Evento</button>
+
+#calendar
+
+
+#myModal.reveal-modal.small
+  %h3 Nuevo Evento
+  !=JST["people/_form_event"](event: null, person: @person)
+
+
+  %a.close-reveal-modal &#215;
+
   

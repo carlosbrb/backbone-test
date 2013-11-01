@@ -24,6 +24,7 @@ class BackboneTest.Routers.People extends Backbone.Router
     @model = @collection.get(id)
     view = new BackboneTest.Views.PeopleShow(model: @model)
     $("#box").html(view.render().el)
+    $('#calendar').fullCalendar()
 
   edit: (id) ->
     @model = @collection.get(id)
