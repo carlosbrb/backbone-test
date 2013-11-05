@@ -16,10 +16,10 @@ class BackboneTest.Views.PeopleEdit extends Backbone.View
   editPerson: (event) ->
     event.preventDefault()
     attributes = name: $('#new_person_name').val(),address: $('#new_person_address').val(),age: $('#new_person_age').val()
+    id = @model.get('id')
     @model.save attributes,
       wait: true
       success: ->
-        $('#box').html('')
-        Backbone.history.navigate('', true)
+        Backbone.history.navigate("people/#{id}", true)
       error: ->
         alert "Faltan Datos"

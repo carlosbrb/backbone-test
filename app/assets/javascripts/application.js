@@ -18,6 +18,7 @@
 //= require backbone
 //= require backbone_test
 // require hamlcoffee
+//= require foundation-datetimepicker
 //= require fullcalendar
 //= require_tree ../templates
 //= require_tree ./models

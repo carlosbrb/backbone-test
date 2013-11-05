@@ -1,0 +1,3 @@
+%h3 Nuevo Evento
+!=JST["people/_form_event"](event: null, person: @person)
+%a#close_modal.close-reveal-modal &#215;

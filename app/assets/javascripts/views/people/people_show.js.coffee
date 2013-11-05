@@ -5,7 +5,8 @@ class BackboneTest.Views.PeopleShow extends Backbone.View
   events:
     'click #back_person': 'backPerson'
     'click #edit': 'editPerson'
-    'submit #person_event': 'personEvent'
+    'click #show_modal': 'showModal'
+    
 
   render: ->
     $(@el).html(@template(person: @model))
@@ -19,7 +20,12 @@ class BackboneTest.Views.PeopleShow extends Backbone.View
     event.preventDefault()
     Backbone.history.navigate("people/#{@model.get('id')}/edit", true)
 
-  personEvent: (event) ->
-    alert 'evento'
+  showModal: (event) ->
     event.preventDefault()
+    Backbone.history.navigate("people/#{@model.get('id')}/new_event", true)
+    # console.log @el
+    # $(@el).append($("#myModal").html())
+    # console.log @el
+
+  
 

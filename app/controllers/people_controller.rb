@@ -21,11 +21,27 @@ class PeopleController < ApplicationController
   def destroy
     respond_with Person.destroy(params[:id])
   end
+
+  def events
+    respond_with Person.find(params[:id]).events
+  end
+
+  def create_event
+    person = Person.find(params[:person_id])
+    event = Event.new(event_params)
+    person.events << event
+    respond_with event
+  end
   
 
   private
-
+    
     def person_params
       params.require(:person).permit(:name, :address, :age)
+    end
+
+
+    def event_params
+      params.require(:event).permit(:title, :start, :end, :person_id)
     end
 end

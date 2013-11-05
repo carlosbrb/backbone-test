@@ -1,11 +1,19 @@
 BackboneTest::Application.routes.draw do
   
+  resources :events
+
   scope "api" do
-    resources :people
+    resources :people do
+      member do
+        get "events"
+        post "events" => 'people#create_event'
+      end
+    end
   end
 
   root "main#index"
-
+  get 'main/index' => 'main#index'
+  
   get "*path", to: "main#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
